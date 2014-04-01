@@ -1,5 +1,6 @@
 #include<cstdio>
-#define max(x, y) ((x>y)?(x):(y))
+#include<iostream>
+#include<algorithm>
 using namespace std;
 
 int main(){
