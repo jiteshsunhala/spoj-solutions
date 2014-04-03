@@ -63,6 +63,5 @@ int main(){
 		scanf("%d%d", &a, &b);
 		printf("%d\n", rev(rev(a) + rev(b)));
 	}
-//    system("pause");
     return 0;
 }

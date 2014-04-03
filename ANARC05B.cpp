@@ -52,6 +52,5 @@ int main(){
 		total += mymax(sum1, sum2);
 		printf("%d\n", total);
 	}
-    //system("pause");
     return 0;
 }

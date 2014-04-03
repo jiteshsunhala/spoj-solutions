@@ -55,7 +55,5 @@ int main(){
 		R = r / sin(acos(-1) / (n * 2));
 		printf("%.2lf\n", R);
 	}
-	
-    system("pause");
     return 0;
 }

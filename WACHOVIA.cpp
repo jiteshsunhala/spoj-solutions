@@ -56,7 +56,6 @@ int main(){
 	    idx ^= 1;
 	    printf("Hey stupid robber, you can get %lld.\n", matrix[idx][k]);
     }
-//    system("pause");
     return 0;
 }
 

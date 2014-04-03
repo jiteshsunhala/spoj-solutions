@@ -77,7 +77,5 @@ int main(){
 		res = (((((v1 + v2) % MOD) + v3) % MOD) + v4) % MOD;
 		printf("%lld\n", res);
 	}
-	
-    system("pause");
     return 0;
 }

@@ -92,6 +92,5 @@ int main(){
 		}
 		printf("Case %d: %d\n", tc, max);
 	}
-//    system("pause");
     return 0;
 }

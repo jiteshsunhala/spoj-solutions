@@ -129,7 +129,5 @@ int main(){
 		scanf("%d%d", &a, &b);
 		printf("%d\n", bfs(a, b));
 	}
-	
-    system("pause");
     return 0;
 }

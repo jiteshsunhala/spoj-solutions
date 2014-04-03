@@ -82,4 +82,5 @@ int main()
         }
         printf("%d. %d\n",t,a[n-1][1]);
     }
+    return 0;
 }

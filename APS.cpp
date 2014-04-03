@@ -59,7 +59,5 @@ int main(){
 		scanf("%d", &n);
 		printf("%lld\n", arr[n]);
 	}
-	
-    system("pause");
     return 0;
 }

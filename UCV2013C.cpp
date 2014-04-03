@@ -21,7 +21,5 @@ int main(){
 		else
 			printf("The firm is trying to bankrupt Farmer Cream by %lld Bsf.\n", total + m - d);
 	}
-	
-    system("pause");
     return 0;
 }

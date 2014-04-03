@@ -45,24 +45,30 @@ typedef unsigned long long int LLU;
 
 using namespace std;
 
-LLD arr[1000000];
-
 int main(){
 	
-	LLD a, b, res=0;
-	int n;
-	scanf("%d", &n);
-	for(int i=0;i<n;i++){
-		scanf("%lld", &arr[i]);
-		res = res | arr[i];
-	}
-	LLD sum = 0;
-	for(int i=0;i<n;i++){
-		sum = sum | ((~arr[i]) & (res ^ arr[i]));
+	char c;
+	double x, y, dis = 0, xi, yi;
+	
+	while(true){
+		scanf("%c", &c);
+		if(c == '(')
+			break;
 	}
 	
-	printf("%lld\n", sum);
+	scanf("%lf%c%c%lf", &x, &c, &c, &y);
+	xi = x;
+	yi = y;
 	
-
+	while(scanf("%c", &c) != EOF){
+		if(c == '('){
+			scanf("%lf%c%c%lf", &x, &c, &c, &y);
+			dis += sqrt(pow((xi - x), 2) + pow((yi - y), 2));
+			xi = x;
+			yi = y;
+			printf("The salesman has traveled a total of %.3lf kilometers.\n", dis);
+		}
+	}
+	
     return 0;
 }

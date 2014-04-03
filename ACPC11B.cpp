@@ -63,14 +63,7 @@ int main(){
             
         qsort(a, n1, sizeof(int), compare);
         qsort(b, n2, sizeof(int), compare);
-        
-/*        for(i=0;i<n1;i++)
-            printf("%d ", a[i]);
-        printf("\n");
-        for(i=0;i<n2;i++)
-            printf("%d ", b[i]);
-        printf("\n");*/
-        
+		        
         min = 1000000;
         for(i=0;i<n1;i++){
             for(j=0;j<n2;j++){

@@ -74,6 +74,5 @@ int main(){
 		}
 		printf("%d\n", cnt);
 	}
-    system("pause");
     return 0;
 }

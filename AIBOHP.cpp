@@ -47,17 +47,7 @@ typedef unsigned long long int LLU;
 using namespace std;
 int mat[size+1][size+1];
 
-void display(int l1, int l2){
-	for(int i=0;i<=l1;i++){
-		for(int j=0;j<=l2;j++)
-			cout << mat[i][j] << " ";
-		cout << endl;
-	}
-}
-
 int lcs(string a, string b, int l1, int l2){
-	
-	//cout << a <<  " " << b << endl;
 	for(int i=0;i<=l1;i++)
 		mat[i][0] = 0;
 	for(int j=0;j<=l2;j++)
@@ -71,9 +61,6 @@ int lcs(string a, string b, int l1, int l2){
 				mat[i][j] = max(mat[i][j-1], mat[i-1][j]);
 		}
 	}
-	
-//	display(l1, l2);
-	
 	return mat[l1][l2];
 }
 
@@ -85,11 +72,8 @@ int main(){
 	while(c--){
 		cin >> s;
 		t = string(s.rbegin(), s.rend());
-//		cout << s << t << endl;
 		int cnt = lcs(s, t, s.length(), t.length());
 		printf("%d\n", s.length() - cnt);
 	}
-	
-    system("pause");
     return 0;
 }

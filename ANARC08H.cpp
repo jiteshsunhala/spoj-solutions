@@ -64,7 +64,5 @@ int main(){
 			break;
 		printf("%d %d %d\n", n, k, josephus(n, k));
 	}
-	
-    system("pause");
     return 0;
 }

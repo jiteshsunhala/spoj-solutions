@@ -126,7 +126,5 @@ int main(){
 		
 		printf("%d. %d:%d\n", c++, ord, dis);
 	}
-	
-    system("pause");
     return 0;
 }

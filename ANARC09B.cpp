@@ -71,7 +71,5 @@ int main(){
 		else
 			printf("%lld\n", mylcm(a, b));
 	}
-	
-    system("pause");
     return 0;
 }

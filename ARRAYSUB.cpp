@@ -59,42 +59,6 @@ int find_max(int x, int y){
 	
 //	system("pause");
 	return max_val;
-	
-	/*
-	cout << "Searching: " << x << " " << y << endl;
-	
-	int first = x / root, last = y / root;
-	int first_idx = min((first + 1) * root - 1, x);
-	
-	cout << "f: " << first << " s: " << last << endl;
-	
-	int max_val = -1;
-	
-	cout << "Searching ranges: " << endl;
-	for(int i=first + 1;i<last;i++){
-		cout << "Range: " << i << endl;
-		if(max_val < a[idx[i]])
-			max_val = a[idx[i]];
-	}
-	
-	system("pause");
-	cout <<	"Searching in first range: " << endl;
-	for(int i=x;i <= first_idx;i++){
-		cout << "Index: " << i << endl;
-		if(max_val < a[i])
-			max_val = a[i];
-	}
-	
-	system("pause");
-	cout <<	"Searching in last range: " << endl;
-	for(int i=max(last * root, y);i <= y;i++){
-		cout << "Index: " << i << endl;
-		if(max_val < a[i])
-			max_val = a[i];
-	}
-	
-	system("pause");
-	return max_val;*/
 }
 
 int main(){
@@ -111,6 +75,5 @@ int main(){
 	}
 	
 	cout << find_max(i, i+k-1);
-	system("pause");
 	return 0;
 }

@@ -74,7 +74,5 @@ int main(){
 		cout << tmp << "\n";
 			
 	}
-	
-    system("pause");
     return 0;
 }

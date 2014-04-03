@@ -60,7 +60,5 @@ int main(){
 		scanf("%d", &n);
 		printf("%d\n", josephus(n, 1));
 	}
-	
-    system("pause");
     return 0;
 }

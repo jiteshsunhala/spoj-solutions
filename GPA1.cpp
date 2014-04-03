@@ -157,6 +157,5 @@ int main(){
 		input();
 		process();
 	}
-    system("pause");
     return 0;
 }

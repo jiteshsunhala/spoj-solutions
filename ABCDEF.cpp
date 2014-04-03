@@ -78,11 +78,6 @@ void prepare_b(){
 	l2 = idx;
 }
 
-void display(int a[1000000], int n){
-	for(int i=0;i<n * n * n;i++)
-		cout << a[i] << " ";
-}
-
 LLD count(){
 	LLD cnt = 0;
 	int i=0, j=0;
@@ -118,7 +113,5 @@ int main(){
 	prepare_b();
 	
 	printf("%lld", count());
-	
-    system("pause");
     return 0;
 }

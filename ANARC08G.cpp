@@ -34,6 +34,5 @@ int main(){
 		}
 		printf("%d. %d %d\n", ++test, ans1, ans2);
 	}
-    system("pause");
     return 0;
 }

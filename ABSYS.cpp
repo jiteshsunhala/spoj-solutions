@@ -106,4 +106,5 @@ int main()
         else
             printf("%d + %d = %d\n",n[0],n[2],n[0]+n[2]);
     }
+    return 0;
 }

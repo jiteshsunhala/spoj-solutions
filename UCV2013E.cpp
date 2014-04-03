@@ -78,6 +78,5 @@ int main(){
 			cout << prod << "\n";
 		}
 	}
-    system("pause");
     return 0;
 }

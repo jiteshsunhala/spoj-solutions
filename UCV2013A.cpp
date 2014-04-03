@@ -24,6 +24,5 @@ int main(){
 		}
 		printf("%lld\n", sum);
 	}
-    system("pause");
     return 0;
 }

@@ -80,4 +80,5 @@ int main()
         }
         printf("%llu\n",res);
     }
+    return 0;
 }

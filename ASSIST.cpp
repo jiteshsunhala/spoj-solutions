@@ -53,6 +53,5 @@ int main(){
 			break;
 		printf("%d\n", arr[n]);
 	}
-    system("pause");
     return 0;
 }

@@ -39,6 +39,5 @@ int main(){
 		}
 	}
 	printf("%lld", final);
-    system("pause");
     return 0;
 }
