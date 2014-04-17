@@ -39,31 +39,45 @@
 #define STSTF stack<STF>
 #define STSTD stack<STD>
 #define STSTC stack<STC>
+#define size 1000001
 
 typedef long long int LLD;
 typedef unsigned long long int LLU;
 
 using namespace std;
 
-int main(){
+int find_highest_power(int n){
+	int cnt = 0, maxpower = 0;
+	while(n % 2 == 0){
+		cnt++;
+		n >>= 1;
+	}
+	maxpower = max(cnt, maxpower);
 	
-	int n, k, arr[20000], t;
-	scanf("%d", &t);
-	while(t--){
-		scanf("%d%d", &n, &k);
-		for(int i=0;i<n;i++)
-			scanf("%d", &arr[i]);
-		sort(arr, arr+n);
-		int first = 0;
-		int next = first + k - 1;
-		int diff = arr[next] - arr[first];
-		while(next < n){
-			diff = min(arr[next] - arr[first], diff);
-			first++;
-			next = first + k - 1;
+	int sqrroot = (int)sqrt((double)n);
+	
+	for(int i=3;i <= sqrroot && n != 1; i+=2){
+		cnt = 0;
+		while(n % i == 0){
+			cnt++;
+			n /= i;
 		}
-		printf("%d\n", diff);
+		maxpower = max(cnt, maxpower);
 	}
 	
-	return 0;
+	if(n > 1)
+		maxpower = max(1, maxpower);
+	
+	return maxpower;
+}
+
+int main(){
+	
+	int q, n, t;
+	scanf("%d", &t);
+	while(t--){
+		scanf("%d", &n);
+		printf("%d\n", find_highest_power(n));
+	}
+    return 0;
 }

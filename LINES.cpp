@@ -47,23 +47,33 @@ using namespace std;
 
 int main(){
 	
-	int n, k, arr[20000], t;
-	scanf("%d", &t);
-	while(t--){
-		scanf("%d%d", &n, &k);
-		for(int i=0;i<n;i++)
-			scanf("%d", &arr[i]);
-		sort(arr, arr+n);
-		int first = 0;
-		int next = first + k - 1;
-		int diff = arr[next] - arr[first];
-		while(next < n){
-			diff = min(arr[next] - arr[first], diff);
-			first++;
-			next = first + k - 1;
-		}
-		printf("%d\n", diff);
-	}
+	map< pair<int, int>, int > mymap;
+	int n, arr[200][2];
 	
-	return 0;
+	while(true){
+		scanf("%d", &n);
+		if(!n)
+			break;
+		mymap.clear();
+		for(int i=0;i<n;i++)
+			scanf("%d %d", &arr[i][0], &arr[i][1]);
+		for(int i=0;i<n-1;i++){
+			for(int j=i+1;j<n;j++){
+				int num = arr[i][1] - arr[j][1];
+				int den = arr[i][0] - arr[j][0];
+				
+				int g = __gcd(num, den);
+				num /= g;
+				den /= g;
+				
+				if(den < 0){
+					num *= -1;
+					den *= -1;
+				}
+				mymap[make_pair(num, den)] = 1;
+			}
+		}
+		printf("%d\n", mymap.size());
+	}
+    return 0;
 }
